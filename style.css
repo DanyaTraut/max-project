@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #fff;
+    border-bottom: 1px solid #000000;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hero-section {
+    padding: 60px 80px 20px 80px; 
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.image-collage {
+    position: relative;
+    height: 520px;
+}
+
+.img-wrapper {
+    position: absolute;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-back {
+    width: 310px;
+    height: 390px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.img-front {
+    width: 270px;
+    height: 330px;
+    bottom: 0;
+    left: 150px;
+    z-index: 2;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; 
+    padding-left: 10px;
+}
+
+.text-row {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.title-y2k {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 110px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+}
+
+.title-streetwear {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 75px;
+    font-weight: 900;
+    color: #a62337;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+.desc-text {
+    font-size: 17px;
+    line-height: 1.3;
+    color: #222;
+    max-width: 360px;
+}
+
+.btn-wrapper.main-cta {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.trend-button {
+    display: inline-block;
+    padding: 16px 50px;
+    background-color: #4A6B94;
+    color: #ffffff;
+    text-decoration: none;
+    
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    border: 2px solid #000000;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+    
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.trend-button:hover {
+    background-color: #3b577a;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    transform: translate(4px, 4px);
+}
+
+.about-section {
+    padding: 60px 20px 60px 20px; 
+    text-align: center;
+}
+
+.about-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 55px;
+    letter-spacing: -1px;
+}
+
+.about-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-paragraphs p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111;
+}
+
+.about-footer {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.gallery-section {
+    padding: 40px 80px 100px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+.gallery-item {
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .header { 
+        padding: 20px 40px; 
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-row { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 5px; 
+    }
+    .hero-section {
+        padding-bottom: 0px;
+    }
+    .btn-wrapper.main-cta {
+        margin: 20px 0 40px 0;
+    }
+}
